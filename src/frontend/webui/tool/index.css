@@ -1,0 +1,14 @@
+@import '../../components/font.css';
+
+.tool-page-title {
+    font-family: "Righteous";
+    font-size: 50px;
+    margin-top: 0;
+}
+
+.tool-page-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

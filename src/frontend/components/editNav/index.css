@@ -1,0 +1,52 @@
+@import '../font.css';
+
+.edit-nav {
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.edit-nav .home {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Righteous';
+    font-size: 30px;
+    line-height: 37px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.edit-nav .edit-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.edit-nav .edit-title {
+    width: 90%;
+    height: 60px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    font-size: 32px;
+}
+
+.edit-nav .edit-publish {
+    background-color: darkgray;
+    border: none;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.edit-nav .edit-publish:active {
+    background-color: slategray;
+}

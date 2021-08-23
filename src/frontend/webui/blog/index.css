@@ -1,0 +1,36 @@
+@import '../../components/font.css';
+
+.blog-create-button {
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+}
+
+.blog-create-button:active {
+    box-shadow: none;
+}
+
+.blog-page-title {
+    font-family: "Righteous";
+    font-size: 50px;
+    margin-top: 0;
+}
+
+.blog-page-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-page-list .article-block-box {
+    margin-bottom: 20px;
+}

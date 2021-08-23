@@ -1,0 +1,26 @@
+@import '../../components/font.css';
+
+.blog-main {
+    align-items: center;
+}
+
+.blog-box {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.blog-box .blog-author {
+    align-self: flex-end;
+    font-family: 'WindSong';
+    font-size: 20px;
+}
+.blog-box .blog-author span {
+    margin-left: 20px;
+}
+
+.blog-box .blog-content img {
+    width: 100%;
+}

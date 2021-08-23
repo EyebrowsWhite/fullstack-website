@@ -1,0 +1,104 @@
+@import '../font.css';
+
+.login-box {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 3px 3px 30px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.login-box .login-title {
+    width: 400px;
+}
+
+.login-box .login-title .login-back-home {
+    font-family: 'Rosario';
+    font-size: 26px;
+    line-height: 36px;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    cursor: default;
+}
+
+.login-box .login-title .login-title-line {
+    border: 1px solid rgba(0, 0, 0, 0.36);
+}
+
+.login-box .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.login-box .login-form label {
+    width: 100%;
+    font-family: 'Rosario';
+    margin: 0;
+    font-size: 20px;
+}
+
+.login-box .login-form input {
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.36);
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 16px;
+    padding: 2px 15px;
+}
+
+.login-box .login-username, .login-password {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    height: 70px;
+}
+
+.login-box .login-button {
+    width: 400px;
+    height: 50px;
+}
+
+.login-box .login-button button {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background-color: rgba(249, 249, 249, 0.35);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25), inset 0px -10px 50px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Rosario';
+    margin: 0;
+}
+
+.login-box .login-button button:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25), inset 0px -10px 20px 5px rgba(0, 0, 0, 0.25);
+}
+.login-box .login-button button:active {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25), inset 1px 1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.login-box .login-register {
+    align-self: flex-end;
+    font-size: 18px;
+}
+
+.login-box .login-register a {
+    color: black;
+}
+
+.login-box .login-register a:hover {
+    color: brown;
+}

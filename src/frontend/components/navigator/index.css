@@ -1,0 +1,52 @@
+@import '../font.css';
+
+.nav {
+    background-color: rgba(151, 151, 151, 0.66);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.nav .home {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Righteous';
+    font-size: 30px;
+    line-height: 37px;
+    position: absolute;
+    left: 10.42%;
+    right: 84.9%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav .selection {
+    position: absolute;
+    left: 29.69%;
+    right: 29.69%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav .selection li {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 19px;
+    color: black;
+    cursor: pointer;
+}
+
+.nav .login {
+    position: absolute;
+    left: 90.1%;
+    right: 5.21%;
+    color: black;
+    font-family: 'Righteous';
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}

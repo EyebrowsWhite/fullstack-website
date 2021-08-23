@@ -1,0 +1,79 @@
+.todo-show-content .todo-show-input {
+    background-color: white;
+    color: black;
+    cursor: default;
+    outline: none;
+    border: none;
+    width: var(--item-width);
+    height: var(--item-height);
+    margin-bottom: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px 55px;
+    box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.todo-show-content .todo-show-item {
+    position: relative;
+}
+
+.todo-show-content .todo-completed {
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: line-through;
+}
+
+.todo-show-content .todo-show-active {
+    text-decoration: none;
+    border: 2px solid blue;
+    color: black;
+}
+
+.todo-show-content .todo-show-item .todo-show-checkbox {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 30%;
+    left: 15px;
+}
+
+.todo-show-content .todo-show-item .todo-show-checkbox::after {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    left: -10px;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid rgba(125, 125, 125, 0.2);
+}
+
+.todo-show-content .todo-show-item .todo-show-checkbox:checked::after {
+    content: "✓";
+    font-size: 28px;
+    font-weight:600;
+    color: green;
+    border: 1px solid rgba(125, 125, 125, 0.9);
+} 
+
+.todo-show-content .todo-show-item .todo-show-delete {
+    position: absolute;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.todo-show-content .todo-show-item .todo-show-delete:hover {
+    color: rgb(160, 40, 40, 0.7);
+}
+
+.todo-show-content .todo-show-item .todo-show-delete:active {
+    color: darkred;
+}
