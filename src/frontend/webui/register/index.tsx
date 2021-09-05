@@ -4,7 +4,7 @@ import { Register } from '../../components/register';
 
 // use the same classname with login page, so no css import
 
-export const RegisterPage = () => {
+const RegisterPage = () => {
     const auth = localStorage.getItem('auth');
     const history = useHistory();
     if (auth) {
@@ -16,3 +16,5 @@ export const RegisterPage = () => {
         </div>
     );
 };
+
+export default RegisterPage;

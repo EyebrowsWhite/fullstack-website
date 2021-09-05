@@ -5,7 +5,7 @@ import { Navigator } from '../../components/navigator';
 import { ToDo } from '../../components/todo';
 import './index.css';
 
-export const ComponentPage = () => {
+const ComponentPage = () => {
     const { component } = useParams<{component:string}>();
     const isTodo = component === 'todo';
 
@@ -19,3 +19,5 @@ export const ComponentPage = () => {
         </>
     );
 }
+
+export default ComponentPage;

@@ -19,7 +19,7 @@ const GET_BLOG = gql`
     }
 `;
 
-export const Blog = () => {
+const Blog = () => {
     const { blogId } = useParams<{blogId:string}>();
 
     const { data, loading, error } = useQuery(GET_BLOG, { variables: { id: parseInt(blogId)} });
@@ -46,3 +46,5 @@ export const Blog = () => {
         </>
     );
 }
+
+export default Blog;

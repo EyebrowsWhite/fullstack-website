@@ -4,7 +4,7 @@ import { NameBlock } from '../../components/nameBlock';
 import { Navigator } from '../../components/navigator';
 import './index.css';
 
-export const ToolPage = () => {
+const ToolPage = () => {
 
     const history =useHistory();
 
@@ -25,3 +25,5 @@ export const ToolPage = () => {
         </>
     );
 }
+
+export default ToolPage;

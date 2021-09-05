@@ -19,7 +19,7 @@ const CREATE_BLOG = gql`
     }
 `;
 
-export const BlogEditPage = () => {
+const BlogEditPage = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [alert, setAlert] = useState(false);
@@ -64,3 +64,5 @@ export const BlogEditPage = () => {
         </div>
     );
 }
+
+export default BlogEditPage;

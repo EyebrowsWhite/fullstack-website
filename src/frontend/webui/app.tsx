@@ -1,19 +1,21 @@
 import { ApolloClient, NormalizedCacheObject, ApolloProvider } from '@apollo/client';
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import { HomePage } from './homepage';
-import { LoginPage } from './login';
-import { RegisterPage } from './register';
 import { cache } from '../cache';
-import { ProfilePage } from './profile';
-import { BlogPage } from './blog';
-import { ToolPage } from './tool';
-import { BlogEditPage } from './blog/edit';
-import { ComponentPage } from './tool/component';
-import { Blog } from './blog/blog';
+import { HomePage } from './homepage';
+import { LoadingPage } from '../components/loading';
 
 import './app.css';
+
+const BlogPage = React.lazy(() => import('./blog'));
+const Blog = React.lazy(() => import ('./blog/blog'));
+const BlogEditPage = React.lazy(() => import ('./blog/edit'));
+const ToolPage = React.lazy(() => import ('./tool'));
+const ComponentPage = React.lazy(() => import ('./tool/component'));
+const ProfilePage = React.lazy(() => import ('./profile'));
+const LoginPage = React.lazy(() => import ('./login'));
+const RegisterPage = React.lazy(() => import ('./register'));
 
 const client:ApolloClient<NormalizedCacheObject> = new ApolloClient({
     cache: cache,
@@ -66,7 +68,9 @@ const App = () => {
 
 ReactDOM.render(
     <ApolloProvider client={client}>
-        <App />
+        <Suspense  fallback={<LoadingPage />}>
+            <App />
+        </Suspense>
     </ApolloProvider>,
     root
 );

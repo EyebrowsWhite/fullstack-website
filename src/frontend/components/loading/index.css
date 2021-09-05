@@ -35,13 +35,6 @@
     border-radius: 50%;
     animation: logo-spin 3.6s linear infinite;
 }
- 
-.loading-logo {
-    width: 64px;
-    height: 64px;
-    z-index: 1;
-    position: absolute;
-}
 
 .loading-word {
     margin-top: 200px;

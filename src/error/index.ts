@@ -1,5 +1,0 @@
-export const enum CUSTOM_ERROR {
-    VERIFY_SUCCESS,
-    VERIFY_SEND_ERROR,
-    INVALID_EMAIL
-};

@@ -9,7 +9,7 @@ import { GET_BLOG_LIST } from '../homepage';
 import { ME } from '../profile';
 import './index.css';
 
-export const BlogPage = () => {
+const BlogPage = () => {
     const history = useHistory();
     const { data } = useQuery(ME);
     const permission = data && data.me && data.me.permission;
@@ -50,3 +50,5 @@ export const BlogPage = () => {
         </>
     );
 }
+
+export default BlogPage;

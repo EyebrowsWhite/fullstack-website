@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Login } from '../../components/login';
 import './index.css';
 
-export const LoginPage = () => {
+const LoginPage = () => {
     const auth = localStorage.getItem('auth');
     const history = useHistory();
     if (auth) {
@@ -15,3 +15,5 @@ export const LoginPage = () => {
         </div>
     );
 };
+
+export default LoginPage;

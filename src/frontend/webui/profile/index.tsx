@@ -17,7 +17,7 @@ export const ME = gql`
     }
 `;
 
-export const ProfilePage = () => {
+const ProfilePage = () => {
     const history = useHistory();
     const {data, loading, error} = useQuery(
         ME,
@@ -63,3 +63,5 @@ export const ProfilePage = () => {
         </>
     );
 }
+
+export default ProfilePage;

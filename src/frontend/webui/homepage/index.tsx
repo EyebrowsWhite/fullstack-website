@@ -26,7 +26,10 @@ export const HomePage = () => {
     const {data, loading, error} = useQuery(GET_BLOG_LIST);
 
     if (loading) return <LoadingPage />;
-    if (error) return <ErrorPage msg={error.message} />;
+    // if (error) return <ErrorPage msg={error.message} />;
+    if (error) {
+        console.log(error.message);
+    }
 
     return (
         <>
