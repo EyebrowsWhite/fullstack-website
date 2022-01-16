@@ -1,0 +1,10 @@
+.register-panel .ant-card {
+    width: 500px;
+    height: 400px;
+    box-shadow: 0 0 10px var(--primary-sd-color);
+    border-radius: 6px;
+}
+
+.register-panel .ant-row.ant-form-item {
+    justify-content: center;
+}

@@ -1,0 +1,45 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Blog {
+    author: String
+    content: String
+    created_time: String
+    id: Int
+    outline: String
+    title: String
+    viewCount: Int
+}
+
+type Mutation {
+    createBlog(author: String!, content: String!, outline: String!, title: String!): Blog
+    login(password: String!, user: String!): User
+    register(email: String!, password: String!, username: String!, verifyCode: String!): User
+    sendVerifyCode(email: String!): Int
+}
+
+type Query {
+    getBlog(id: Int!): Blog
+    getBlogList: [Blog]
+    me: User
+}
+
+type User {
+    email: String
+    id: Int
+    password: String
+    permission: Permission
+    token: String
+    username: String
+}
+
+enum Permission {
+    ADMIN
+    ADVANCE
+    NORMAL
+    SUPERADMIN
+}

@@ -1,17 +1,21 @@
-# This is a simple website using graphql
+# Eyebrows White's Website
 
-website: [白眉居](http://www.eyebrow.top)(so slow for now, no time to optimize)
+This is my website using graphql. [白眉居](https://www.eyebrow.top) (Not yet deployed)
 
-## run
-- `npm install`
-- `npm run vite`
+### Tech Stack
 
-~~This project is a practice project for me to learn graphql~~ This project will be my website, which need a lot improvement using `react` `express` `apollo-graphql`.
+- language: `typescript` && `javascript`
+  - framework: `react` && `express` && `apollo graphql`
+- database: `postgres`
+- container: `docker`
 
-I remove the backend code for now, because i need improve the messy code, and i will add a docker next time.
+### TODO
 
-## build tool
+* [ ] add database table creating and updating file
+* [ ] add more instructions about this projects
+* [ ] add prettier and eslint configuration
+* [ ] improve the nav menu
+* [ ] modify the markdown editor for uploading image to my server
+* [ ] There are many more, which will be added gradually
 
-This project can use three build tools, the scripts in `package.json` will tell you how to start it.
-
-And I need to say, you need change the `public/esbuild-index.html` to `public/index.html` when you want to use `npm run esbuild` and change it back when run `npm run vite`, that's because vite will find the `index.html` file as entry file. 
+*JUST KEEP LEARNING*

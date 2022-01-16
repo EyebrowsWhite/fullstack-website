@@ -1,0 +1,91 @@
+.todo-box {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    --item-width: 550px;
+    --item-height: 65px;
+}
+
+.todo-box .todo-name {
+    /* font-family: 'Righteous'; */
+    font-size: 50px;
+    margin-top: 0;
+}
+
+.todo-box .todo-input-box .todo-input {
+    width: var(--item-width);
+    height: var(--item-height);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    box-sizing: border-box;
+    padding: 5px 30px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.todo-box .todo-show-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.todo-box .todo-show-box .todo-show-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-box .todo-show-tab {
+    text-decoration: none;
+    list-style: none;
+    width: var(--item-width);
+    display: flex;
+    margin-top: 20px;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.todo-box .todo-show-tab li {
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    width: 80px;
+    text-align: center;
+}
+
+.todo-box .todo-show-tab li:active {
+    box-shadow: none;
+}
+
+.todo-box .todo-show-feature {
+    display: flex;
+    width: var(--item-width);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.todo-box .todo-show-feature p {
+    font-size: 14px;
+}
+
+.todo-box .todo-show-feature p span {
+    font-size: 20px;
+    color: red;
+}
+
+.todo-box .todo-show-feature button {
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+.todo-box .todo-show-feature button:active {
+    box-shadow: none;
+}

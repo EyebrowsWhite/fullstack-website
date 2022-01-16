@@ -1,0 +1,48 @@
+.article-card {
+  margin: 20px 0;
+  width: 600px;
+  height: 250px;
+  background-color: var(--card-bg-color);
+  box-shadow: 0px 0px 3px 0px var(--primary-sd-color);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 50px 20px 50px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.article-card:hover {
+  box-shadow: 3px 3px 10px 1px var(--primary-sd-color);
+}
+
+.article-card .title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+.article-card .outline,
+.article-card .author {
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.article-card .author,
+.article-card .publish-time {
+  line-height: 20px;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.article-card .author {
+  font-size: 14px;
+}
+
+.article-card .publish-time {
+  font-size: 12px;
+}

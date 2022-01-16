@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+
+  db:
+    image: postgres:12.9
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./volumes/pg_data:/var/lib/postgresql/data
+    environment:
+     POSTGRES_PASSWORD: postgres_dev
+
+  # redis:
+  #   image: redis:6.2
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - ./volumes/redis_data:/data
+  
+  # ipfs:
+  #   image: ipfs/go-ipfs:latest
+  #   ports:
+  #     - "5001:5001"
+  #     - "4001:4001"
+  #     - "8080:8080"
+  #   volumes:
+  #     - ./volumes/ipfs_data:/data/ipfs
