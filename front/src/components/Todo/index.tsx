@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useEffect, useReducer, useState } from 'react';
 import { nanoid } from 'nanoid';
 import './index.css';
-import { TodoItem, Todo } from './todoItem';
+import { TodoItem, Todo } from './TodoItem';
 
 const initialTab = { name: 'ALL' };
 

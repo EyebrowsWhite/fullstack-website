@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const autoprefixer = require('autoprefixer');
 
 module.exports = (env) => {
@@ -31,6 +32,7 @@ module.exports = (env) => {
             new MiniCssExtractPlugin({
                 filename: `[name].[chunkhash].css`,
             }),
+            new Dotenv(),
         ],
         module: {
             rules: [

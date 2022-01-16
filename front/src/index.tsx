@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import dotenv from 'dotenv';
 
 import {
   ApolloClient,
@@ -24,15 +23,13 @@ import BlogLayout from "./pages/Blog/BlogLayout";
 import BlogEditor from "./pages/Blog/BlogEditor";
 import Tool from "./pages/Tool";
 
-dotenv.config();
-
 const root = document.createElement("div");
 root.id = "root";
 document.body.appendChild(root);
 
 const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
   cache: cache,
-  uri: `http://localhost:${process.env['FRONTEND_PORT'] || '9999'}/graphql`,
+  uri: `http://localhost:${process.env['BACKEND_PORT'] || '9998'}/graphql`,
   headers: {
     authorization: localStorage.getItem("auth") || "",
   },
