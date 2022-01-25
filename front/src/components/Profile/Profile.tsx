@@ -1,21 +1,11 @@
 import React, { FC, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
+import { user } from '../../graphql';
 
 import "./index.css";
 
 import { message } from "antd";
-
-export const ME = gql`
-  query Me {
-    me {
-      id
-      username
-      email
-      permission
-    }
-  }
-`;
 
 export const Profile: FC = () => {
   const navigate = useNavigate();
@@ -27,7 +17,7 @@ export const Profile: FC = () => {
     }
   });
 
-  const { data } = useQuery(ME);
+  const { data } = useQuery(user.ME);
 
   const logout = () => {
     localStorage.removeItem("auth");
