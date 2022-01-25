@@ -9,6 +9,7 @@ const autoprefixer = require('autoprefixer');
 module.exports = (env) => {
     dotenv.config();
     const FRONTEND_PORT = process.env['FRONTEND_PORT'] || '9999';
+    const FILE_SERVER_PORT = process.env['FILE_SERVER_PORT'] || '9997';
 
     const PROD = !!(env && env['production']);
 
@@ -98,6 +99,12 @@ module.exports = (env) => {
                 },
                 compress: true,
                 historyApiFallback: true,
+                proxy: {
+                    '/api/upload':{
+                        target: `http://127.0.0.1:${FILE_SERVER_PORT}`,
+                        pathRewrite: { '^/api/upload': '/upload' },
+                    },
+                },
             },
         };
         config = {...config, ...devConfig};

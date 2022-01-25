@@ -22,6 +22,7 @@ import Blog from "./pages/Blog/Blog";
 import BlogLayout from "./pages/Blog/BlogLayout";
 import BlogEditor from "./pages/Blog/BlogEditor";
 import Tool from "./pages/Tool";
+import UploadPage from "./pages/UploadPage";
 
 const root = document.createElement("div");
 root.id = "root";
@@ -59,6 +60,7 @@ ReactDOM.render(
             <Route path="edit" element={<BlogEditor />} />
           </Route>
           <Route path="tool" element={<Tool />} />
+          <Route path="upload" element={<UploadPage />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
