@@ -11,7 +11,7 @@ import { cache } from "./cache";
 
 import "./index.css";
 
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -23,6 +23,7 @@ import BlogLayout from "./pages/Blog/BlogLayout";
 import BlogEditor from "./pages/Blog/BlogEditor";
 import Tool from "./pages/Tool";
 import UploadPage from "./pages/UploadPage";
+import NavMenu from "./components/NavMenu";
 
 const root = document.createElement("div");
 root.id = "root";
@@ -39,7 +40,8 @@ const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
 const App: FC = () => {
   return (
     <>
-      <Header />
+      {/*<Header />*/}
+      <NavMenu />
       <Outlet />
     </>
   );
