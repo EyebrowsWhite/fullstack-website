@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg-color);
+  padding-right: 40px;
+}
+.website-logo {
+  color: rebeccapurple;
+  cursor: pointer;
+}
+.website-logo > img {
+  width: 6rem;
+  height: var(--header-height);
+}
+.header-user {
+  font-size: 24px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

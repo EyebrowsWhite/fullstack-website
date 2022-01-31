@@ -2,12 +2,13 @@
     --page-bg-color: #FBFBF8;
     --main-bg-color: #FFFCF7;
     --card-bg-color: #FFFFFF;
-    --header-bg-color: #979797;
-    --header-hover-bg-color: #c7c7c7;
+    --header-bg-color: silver;
+    --header-hover-bg-color: #979797;
+    --header-active-bg-color: #a7a7a7;
     --primary-shadow-color: rgba(0, 0, 0, 0.3);
     --emphasis-font-black: rgba(0, 0, 0, 0.6);
     --primary-font-black: rgba(0, 0, 0, 0.9);
-    --primary-font-light: #FFFFFF;
+    --primary-font-light: #f1f1f1;
     --link-active-color: mediumblue;
     --header-height: 60px;
     --font-size-large: 1.2rem;

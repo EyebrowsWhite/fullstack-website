@@ -1,5 +1,6 @@
 @import "./var.css";
 @import "./layout.css";
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
 body {
   min-width: 650px;

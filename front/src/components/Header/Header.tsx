@@ -1,39 +1,29 @@
-import React, { FC, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Menu } from "antd";
-import { LoginOutlined } from "@ant-design/icons";
+import React, { FC } from "react";
+import {useNavigate} from "react-router-dom";
+import {UserOutlined} from "@ant-design/icons";
+import NavMenu from "../NavMenu";
 import "./index.css";
+import websiteLogo from "../../../assets/img/logo.svg";
 
 export const Header: FC = () => {
-  const [current, setCurrent] = useState("home");
-  const handleSelect = (e: any) => {
-    setCurrent(e.key);
+  const navigate = useNavigate();
+
+  const navToUser = () => {
+    navigate("/login");
   };
+  const navToHome = () => {
+    navigate("/");
+  };
+
   return (
     <header>
-      <Menu
-        style={{ background: "rgba(151, 151, 151, 0.66)" }}
-        onClick={handleSelect}
-        selectedKeys={[current]}
-        mode="horizontal"
-        theme="dark"
-      >
-        <Menu.Item key="home">
-          <NavLink to="/">Home</NavLink>
-        </Menu.Item>
-        <Menu.Item key="blog">
-          <NavLink to="/blog">Blog</NavLink>
-        </Menu.Item>
-        <Menu.Item key="tool">
-          <NavLink to="/tool">Tool</NavLink>
-        </Menu.Item>
-        <Menu.Item key="login" icon={<LoginOutlined />}>
-          <NavLink to="/login">Login</NavLink>
-        </Menu.Item>
-        <Menu.Item key="profile">
-          <NavLink to="/profile">Profile</NavLink>
-        </Menu.Item>
-      </Menu>
+        <div className="website-logo" onClick={navToHome}>
+          <img src={websiteLogo} alt="logo" />
+        </div>
+        <NavMenu />
+        <div className="header-user" onClick={navToUser}>
+            <UserOutlined />
+        </div>
     </header>
   );
 };
