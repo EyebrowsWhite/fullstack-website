@@ -14,7 +14,7 @@ This is my website using graphql. [白眉居](https://www.eyebrow.top) (Not yet 
 * [ ] add database table creating and updating file
 * [ ] add more instructions about this projects
 * [ ] add prettier and eslint configuration
-* [ ] improve the nav menu
+* [x] ~~improve~~ customize the nav menu
 * [ ] modify the markdown editor for uploading image to my server
 * [ ] There are many more, which will be added gradually
 

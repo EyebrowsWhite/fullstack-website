@@ -1,4 +1,4 @@
-import Editor from './Editor';
+import { TEditor } from './TEditor';
 import Viewer from './Viewer';
 
-export { Editor, Viewer };
+export { TEditor, Viewer };
