@@ -36,7 +36,12 @@ const Blog: FC = () => {
       <div className="blog-content" style={{ width: "50vw", minWidth: "500px" }}>
         {data && data.getBlog && (
           <div className="blog-box">
-            <h1 className="blog-title">{data.getBlog.title}</h1>
+            <div className="blog-content">
+              <Viewer
+                initialValue={data.getBlog.content}
+                plugins={[[codeSyntaxHighlight, { highlighter: Prism }]]}
+              />
+            </div>
             <p className="blog-author">
               <span>{data.getBlog.author}</span>
               <span>
@@ -45,12 +50,6 @@ const Blog: FC = () => {
                 ).toLocaleDateString()}
               </span>
             </p>
-            <div className="blog-content">
-              <Viewer
-                initialValue={data.getBlog.content}
-                plugins={[[codeSyntaxHighlight, { highlighter: Prism }]]}
-              />
-            </div>
           </div>
         )}
       </div>
