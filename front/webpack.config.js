@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const autoprefixer = require('autoprefixer');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = (env) => {
     dotenv.config();
@@ -18,8 +19,8 @@ module.exports = (env) => {
         devtool: 'source-map',
         entry: path.resolve(__dirname, 'src/index.tsx'),
         output: {
-            filename: '[id].[name].bundle.js',
-            chunkFilename: '[id].[name].chunk.js',
+            filename: '[name].[chunkhash].bundle.js',
+            chunkFilename: '[name].[chunkhash].chunk.js',
             path: path.resolve(__dirname, 'dist'),
             clean: true,
             publicPath: "/",
@@ -82,6 +83,33 @@ module.exports = (env) => {
             ],
             splitChunks: {
                 chunks: 'all',
+                cacheGroups: {
+                    toastui: {
+                        test: /[\\/]node_modules[\\/](@toast-ui)[\\/]/,
+                        name: 'toastui',
+                        chunks: 'all',
+                    },
+                    antd: {
+                        test: /[\\/]node_modules[\\/](antd\/es)[\\/]/,
+                        name: 'antd',
+                        chunks: 'all',
+                    },
+                    react: {
+                        test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+                        name: 'react',
+                        chunks: 'all',
+                    },
+                    apollo: {
+                        test: /[\\/]node_modules[\\/](@apollo\/client)[\\/]/,
+                        name: 'apollo',
+                        chunks: 'all',
+                    },
+                    default: {
+                        minChunks: 2,
+                        priority: -20,
+                        reuseExistingChunk: true,
+                    },
+                },
             },
         },
     };
@@ -108,6 +136,9 @@ module.exports = (env) => {
             },
         };
         config = {...config, ...devConfig};
+    }
+    if (env && env['analyze']) {
+        config.plugins.push(new BundleAnalyzerPlugin());
     }
     return config;
 };
